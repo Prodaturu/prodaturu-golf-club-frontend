@@ -199,7 +199,6 @@ video{
 }
 
 #cards-container{
-    background-color: crimson;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -211,7 +210,6 @@ video{
 .card{
     height: 80%;
     width: 24%;
-    background: blue;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
@@ -247,6 +245,6 @@ video{
 
 .overlay p{
     color: #000;
-    font-size: 1.7vw;
+    font-size: 1.8vw;
     padding-top: 15px;
 }
