@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    color: #fed;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor{
+    height: min(2vw, 2vh);
+    width: min(2vw, 2vh);
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 3;
+}
+
+#cursor-blur{
+    height: min(20vw, 20vh);
+    width: min(20vw, 20vh);
+    background-color: #b3d458b2;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(min(20vw, 10vh));
+    z-index: 2;
+}
+
+nav {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 50px;
+    gap: 4%;
+    position: fixed;
+    z-index: 999;
+}
+
+#nav img{
+    aspect-ratio: 31/10;
+    width: 20%;
+    max-height: 52px;
+    max-width: 156px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: min(1.5vw, 16px);
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 9vw;
+    font-weight: 900;
+    position: relative;
+    z-index: 10;
+}
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4%;
+    left: -0.5%;
+    -webkit-text-stroke: 2px #82a71a;
+    z-index: -1;
+}
+
+#page1 h2{
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin-top: 0.4%;
+    margin-bottom: 0.8%;
+}
+
+#page1 p{
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 65%;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 7vw;
+    font-weight: 900;
+    font-family: 'Gilroy', sans-serif;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: transparent;
+    -webkit-text-stroke: 2px #95c11e;
+    transition: all 0.4s;
+}
+
+#scroller-in h4:hover{
+    color: #95c11e !important;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items:  center;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+#about-us img{
+    height: min(25vh, 25vw);
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+#about-us-inside{
+    width: 40%;
+    text-align:  center;
+}
+
+#about-us-inside p{
+    font-size: 1.25vw;
+    font-weight: 500;
+}
+
+#about-us-inside h3{
+    font-size: 2.25vw;
+    font-weight: 800;
+    padding-bottom: 2vh;
+}
+
+#cards-container{
+    background-color: crimson;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 80%;
+    width: 24%;
+    background: blue;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#card1{
+    background-image: url('./images/card1.avif');
+}
+
+#card2{
+    background-image: url('./images/card2.webp');
+}
+
+#card3{
+    background-image: url('./images/card3.avif');
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding-top: 10%;
+    padding: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 2.5vw;
+    font-weight: 800;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 1.7vw;
+    padding-top: 15px;
+}
