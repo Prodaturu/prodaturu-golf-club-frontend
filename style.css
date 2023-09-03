@@ -107,7 +107,7 @@ video{
 }
 
 #page1 p{
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 16px);
     font-weight: 500;
     width: 65%;
 }
@@ -208,11 +208,16 @@ video{
 }
 
 .card{
-    height: 80%;
+    height: 85%;
     width: 24%;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
+    max-height: 50vw;
+    overflow: hidden;
+    transition: transform 0.1s linear, all ease 0.6s;
+    transform-style: preserve-3d;
+    perspective: 50vw; 
 }
 
 #card1{
@@ -231,20 +236,55 @@ video{
     height: 100%;
     width: 100%;
     background-color: #95c11e;
-    padding-top: 10%;
-    padding: 5%;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all ease 0.6s;
+}
+
+.overlay:hover{
+    opacity: 1;
 }
 
 .overlay h4{
     color: #000;
     font-size: 2.5vw;
     font-weight: 800;
+    /* white-space: nowrap; */
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
 }
 
 .overlay p{
     color: #000;
-    font-size: 1.8vw;
+    font-size: min(1.7vw, 24px);
     padding-top: 15px;
+}
+
+#green-div{
+    height: 24vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgb(50, 194, 50),#95c11e);
+    margin: 5px;
+}
+
+#green-div h4{
+    width: 45%;
+    font-size: 2vw;
+    font-weight: 800;
+    line-height: 3.5vw;
+    text-align: center;
+    color: #000;
+}
+
+
+#green-div img{
+    height: 20vh;
+    width: 14%;
+    object-fit: cover;
 }

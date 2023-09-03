@@ -34,3 +34,25 @@ gsap.to("#main", {
         scrub: 2,
     }
 })
+
+// Get all card elements
+const cards = document.querySelectorAll('.card');
+
+// Add mousemove event to each card
+cards.forEach((card) => {
+    card.addEventListener('mousemove', function(e) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within the element
+        const y = e.clientY - rect.top;  // y position within the element
+
+        const tiltX = (y / rect.height - 0.5) * 40;
+        const tiltY = -(x / rect.width - 0.5) * 30;
+
+        card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    });
+
+  // Reset the transform when mouse leaves
+    card.addEventListener('mouseleave', function() {
+        card.style.transform = '';
+    });
+});
