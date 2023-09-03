@@ -8,6 +8,23 @@ document.addEventListener("mousemove", function(dets){
     blur.style.top = dets.y-70+"px";
 });     //- dets tracks the position of the mouse
 
+//+ Cursor modifications when entering and leaving h4
+var h4all = document.querySelectorAll("#nav h4");
+
+h4all.forEach(function(elem) {
+    elem.addEventListener("mouseenter", function() {
+        crsr.style.transform = "scale(2.5)";
+        crsr.style.border = "1px solid #fff";
+        crsr.style.backgroundColor = "transparent";
+    });
+    elem.addEventListener("mouseleave", function() {
+        crsr.style.transform = "scale(1)";
+        crsr.style.border = "0px solid #fff";
+        crsr.style.backgroundColor = "#95c11e";
+    });
+});
+
+
 gsap.to("#nav", {
     backgroundColor: "rgba(0,0,0,0.75)",
     duration: 0.5,
@@ -56,3 +73,61 @@ cards.forEach((card) => {
         card.style.transform = '';
     });
 });
+
+gsap.from("#about-us img, #about-us-inside",{
+    y:90,
+    scale: 0.9,
+    opacity: 50,
+    duration: 1,
+    stagger: {
+        amount: 1,
+        from: "center",
+        ease: "power1.inOut"
+    },
+    scrollTrigger:{
+        trigger: "#about-us",
+        scroller: "body",
+        // markers: true,
+        start:"top 75%",
+        end: "top 65%",
+        scrub:3
+    }
+})
+
+gsap.from(".card",{
+    scale:0.8,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".card",
+        scroller: "body",
+        // markers: true,
+        start:"top 70%",
+        end: "top 65%",
+        scrub:1
+    }
+})
+
+gsap.from("#quote1",{
+    y: -90,
+    x:-70,
+    scrollTrigger:{
+        trigger: "#quote1",
+        scroller: "body",
+        start:"top 70%",
+        end:"top 60%",
+        // markers: true,
+}}
+)
+
+gsap.from("#quote2",{
+    y: 90,
+    x: 70,
+    scrollTrigger:{
+        trigger: "#quote2",
+        scroller: "body",
+        start:"top 95%",
+        end:"top 85%",
+        // markers: true,
+}}
+)

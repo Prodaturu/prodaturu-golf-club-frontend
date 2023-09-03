@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
     color: #fed;
+    cursor: pointer;
 }
 
 html, body {
@@ -20,16 +21,18 @@ html, body {
     border-radius: 50%;
     position: fixed;
     z-index: 3;
+    transition: all 0.25s ease;
 }
 
 #cursor-blur{
-    height: min(20vw, 20vh);
-    width: min(20vw, 20vh);
-    background-color: #b3d458b2;
+    height: min(25vw, 25vh);
+    width: min(25vw, 25vh);
+    background-color: #c2df72a2;
     border-radius: 50%;
     position: fixed;
     filter: blur(min(20vw, 10vh));
     z-index: 2;
+    transition: 0.7s ease;
 }
 
 nav {
@@ -216,7 +219,7 @@ video{
     max-height: 50vw;
     overflow: hidden;
     transition: transform 0.1s linear, all ease 0.6s;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     perspective: 50vw; 
 }
 
@@ -282,9 +285,41 @@ video{
     color: #000;
 }
 
-
 #green-div img{
     height: 20vh;
     width: 14%;
     object-fit: cover;
+}
+
+#page3{
+    height: 100vh;
+    width:100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3>p{
+    font-size: 2.25vw;
+    line-height: 3.25vw;
+    font-weight: 700;
+    width: 55%;
+    text-align: center;
+}
+
+#page3 img{
+    position: absolute;
+    width: 5%;
+}
+
+#page3 #quote1{
+    left: 12%;
+    top : 35%;
+}
+
+#page3 #quote2{
+    right: 15%;
+    bottom: 40%;
 }
