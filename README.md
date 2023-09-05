@@ -27,6 +27,8 @@ The Prodaturu Golf Club website is a comprehensive platform designed to provide 
 1. Clone the repository.
 2. Open `index.html` in your browser.
 
+- Additionally, you could visit the live web page for this project at 'https://prodaturu.github.io/prodaturu-golf-club-frontend'
+
 ## Customization
 
 - To change the logo, replace the image in the `images` folder and update the `src` attribute in the HTML file.
