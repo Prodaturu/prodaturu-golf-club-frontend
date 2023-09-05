@@ -51,4 +51,3 @@ This project is open-source and available under the MIT License.
 ---
 
 For any further questions, please open an issue or contact me on linkedin here: `https://www.linkedin.com/in/saikiran-prodaturu-59914a104/`
-`
